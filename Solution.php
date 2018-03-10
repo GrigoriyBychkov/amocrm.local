@@ -14,7 +14,6 @@ class Solution
 
         if (AuthManager::logIn()) {
             $leadsIds = LeadsModel::getIdsOfLeadsWithNoTasks();
-
             if (count($leadsIds) == 0) {
                 $result['message'] = 'No leads without tasks';
                 return $result;
@@ -37,5 +36,6 @@ class Solution
 }
 
 $res = Solution::createTasksForLeadsWithoutTasks();
+
 
 print_r($res);

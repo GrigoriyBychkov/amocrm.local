@@ -5,7 +5,7 @@ class LeadsModel
     static function getIdsOfLeadsWithNoTasks()
     {
         $leadsList = self::getAllLeads();
-        if (count($leadsList) == 0) {
+        if (count($leadsList['leads']) == 0) {
             return [];
         }
 
